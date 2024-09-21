@@ -23,6 +23,14 @@ li {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
+
+    @media @breakpointTablet{
+        max-width: 80%;
+    }
+
+    @media @breakpointMobile{
+        max-width: 80%;
+    }
 }
 
 header {
@@ -63,12 +71,25 @@ section {
     column-gap: 1%;
     row-gap: 4%;
     width: 100%;
+
+    @media @breakpointTablet{
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+
+    @media @breakpointMobile{
+        display: block;
+    }
 }
 
 .product-item{
     iimg{
         width: 100%;
         border-radius: 16px;
+    }
+
+    @media @breakpointMobile{
+        margin-bottom: 32px;
     }
 }
 
@@ -84,5 +105,13 @@ section {
 
     &:hover{
         background-color: #colors[btnBGColorHover];
+    }
+
+    @media @breakpointMobile{
+        max-width: 40%;
+    }
+
+    @media @breakpointTablet{
+        max-width: 70%;
     }
 }
